@@ -2,10 +2,10 @@
  * @Description:
  * @Author: liudehua
  * @Date: 2021-02-03 18:04:24
- * @LastEditTime: 2021-03-18 09:26:07
+ * @LastEditTime: 2021-03-26 17:03:15
  * @LastEditors: liudehua
  */
-
+import Template from "@/components/layouts/Template.vue";
 const test: any = {
   path: "test",
   name: "Test",
@@ -14,7 +14,7 @@ const test: any = {
     icon: "",
     isMenu: true
   },
-  component: () => import("@/components/layouts/Template.vue"),
+  component: Template,
   children: [
     {
       path: "about",
@@ -25,7 +25,7 @@ const test: any = {
         isMenu: true,
         tag: "test"
       },
-      component: () => import("@/components/layouts/Template.vue"),
+      component: () => Template,
       children: [
         {
           path: "about1",
