@@ -2,7 +2,7 @@
  * @Description:
  * @Author: liudehua
  * @Date: 2021-02-03 18:04:24
- * @LastEditTime: 2021-03-26 17:03:15
+ * @LastEditTime: 2021-03-26 17:05:12
  * @LastEditors: liudehua
  */
 import Template from "@/components/layouts/Template.vue";
@@ -25,7 +25,7 @@ const test: any = {
         isMenu: true,
         tag: "test"
       },
-      component: () => Template,
+      component: Template,
       children: [
         {
           path: "about1",
