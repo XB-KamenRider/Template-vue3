@@ -55,21 +55,6 @@ npm run test:unit
 npm run lint
 ```
 
-### 上传 -- 目前由 Jenkins 发布
-
-```deploy
-上传 oss 至开发环境目录
-npm run deploy
-
-上传 oss 至测试环境目录
-npm run deploy:debug
-
-上传 oss 至生产环境目录
-npm run deploy:prod
-
-上传Jenkinsfile由运维维护
-```
-
 ### git commit 规范
 
 格式：type (scope): subject，其中 type（必需）、scope（可选）和 subject（必需）

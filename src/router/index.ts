@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
-import Login from "@/pages/auth/Login.vue";
+import Login from "@/pages/auth/Login/index.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -27,9 +27,5 @@ const router = createRouter({
   history: createWebHashHistory(process.env.NODE_ENV),
   routes
 });
-
-export const resetRouter = () => {
-  console.log(router);
-};
 
 export default router;
