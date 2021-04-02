@@ -2,6 +2,7 @@ import axios from "axios";
 import { message } from "ant-design-vue";
 import qs from "qs";
 import storage from "@/utils/storage";
+import store from "@/store";
 const config = require("./config");
 // 全局配置
 // 创建 axios 实例
@@ -22,6 +23,9 @@ function responseSuccess(response: Record<string, any>) {
     // 异常状态下，把错误信息返回去
     if (response && response.data && response.data.retMsg) {
       message.error(response.data.retMsg);
+      if (response.data.retCode === 24000001 || response.data.retCode === 24000004) {
+        store.dispatch("user/logout");
+      }
       return;
     } else if (response && response.status === 404) {
       message.error("访问异常");

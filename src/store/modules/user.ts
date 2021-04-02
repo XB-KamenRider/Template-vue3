@@ -2,7 +2,7 @@
  * @Description:
  * @Author: liudehua
  * @Date: 2021-01-04 15:59:03
- * @LastEditTime: 2021-03-19 14:23:04
+ * @LastEditTime: 2021-03-31 14:57:41
  * @LastEditors: liudehua
  */
 
@@ -58,6 +58,10 @@ const actions = {
       context.commit("SET_TOKEN", "");
       context.commit("SET_ROLES", []);
       Storage.removeAll(["ACCOUNT", "TOKEN", "USERINFO"]);
+      const loca = window.location;
+      loca.href = loca.pathname
+        ? loca.origin + loca.pathname + "#/login"
+        : loca.origin + "/#/login";
       resolve("");
     });
   }
