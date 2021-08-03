@@ -24,7 +24,6 @@ import {
   Modal,
   Table,
   Tabs,
-  Icon,
   Badge,
   Popover,
   Dropdown,
@@ -55,6 +54,7 @@ import {
 } from "ant-design-vue";
 
 import "./styles/base.less";
+import "./styles/import.less";
 import "./permission";
 
 const app = createApp(App);
@@ -80,7 +80,6 @@ app
   .use(Modal)
   .use(Table)
   .use(Tabs)
-  .use(Icon)
   .use(Badge)
   .use(Popover)
   .use(Dropdown)
